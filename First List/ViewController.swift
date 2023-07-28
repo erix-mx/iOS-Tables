@@ -19,9 +19,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableView.dataSource = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell-sample-id")
+        tableView.register(UINib(nibName: "ItemTableViewCell", bundle: nil), forCellReuseIdentifier: "ItemTableViewCell")
         tableView.delegate = self
     }
     
@@ -30,13 +29,18 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDataSource {
     //number of items
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 100
+        return itemDataArray.count
     }
     
     //Show items
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell-sample-id", for: indexPath)
-        cell.textLabel?.text = "I'm cell number \(indexPath)"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ItemTableViewCell", for: indexPath)
+        let currentItem = itemDataArray[indexPath.row]
+        (cell as? ItemTableViewCell)?.setupCell(
+            username:currentItem.name,
+            content: currentItem.contentText,
+            urlImage: currentItem.profileImage
+        )
         return cell
     }
 }
