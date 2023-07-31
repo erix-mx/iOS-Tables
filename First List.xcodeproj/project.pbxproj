@@ -17,6 +17,11 @@
 		8D2CD9322A7337620095F9EF /* ItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D2CD9302A7337620095F9EF /* ItemTableViewCell.xib */; };
 		8D2CD9352A7343210095F9EF /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2CD9342A7343210095F9EF /* DataProvider.swift */; };
 		8D2CD9382A73461F0095F9EF /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 8D2CD9372A73461F0095F9EF /* Kingfisher */; };
+		8D2CD93C2A74B7950095F9EF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8D2CD93B2A74B7950095F9EF /* Alamofire */; };
+		8D2CD93E2A74B7D60095F9EF /* NarutoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2CD93D2A74B7D60095F9EF /* NarutoData.swift */; };
+		8D2CD9402A74B87C0095F9EF /* NarutoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2CD93F2A74B87C0095F9EF /* NarutoManager.swift */; };
+		8D2CD9422A74BB680095F9EF /* NarutoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2CD9412A74BB670095F9EF /* NarutoModel.swift */; };
+		8D2CD9442A7617BB0095F9EF /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2CD9432A7617BB0095F9EF /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +36,10 @@
 		8D2CD92F2A7337620095F9EF /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		8D2CD9302A7337620095F9EF /* ItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemTableViewCell.xib; sourceTree = "<group>"; };
 		8D2CD9342A7343210095F9EF /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		8D2CD93D2A74B7D60095F9EF /* NarutoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NarutoData.swift; sourceTree = "<group>"; };
+		8D2CD93F2A74B87C0095F9EF /* NarutoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NarutoManager.swift; sourceTree = "<group>"; };
+		8D2CD9412A74BB670095F9EF /* NarutoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NarutoModel.swift; sourceTree = "<group>"; };
+		8D2CD9432A7617BB0095F9EF /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +48,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D2CD9382A73461F0095F9EF /* Kingfisher in Frameworks */,
+				8D2CD93C2A74B7950095F9EF /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +79,7 @@
 				8D2CD91A2A7331610095F9EF /* AppDelegate.swift */,
 				8D2CD91C2A7331610095F9EF /* SceneDelegate.swift */,
 				8D2CD91E2A7331610095F9EF /* ViewController.swift */,
+				8D2CD9392A74B5420095F9EF /* Controllers */,
 				8D2CD9202A7331610095F9EF /* Main.storyboard */,
 				8D2CD9232A7331630095F9EF /* Assets.xcassets */,
 				8D2CD9252A7331630095F9EF /* LaunchScreen.storyboard */,
@@ -90,8 +101,19 @@
 			isa = PBXGroup;
 			children = (
 				8D2CD9342A7343210095F9EF /* DataProvider.swift */,
+				8D2CD93D2A74B7D60095F9EF /* NarutoData.swift */,
+				8D2CD93F2A74B87C0095F9EF /* NarutoManager.swift */,
+				8D2CD9412A74BB670095F9EF /* NarutoModel.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		8D2CD9392A74B5420095F9EF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8D2CD9432A7617BB0095F9EF /* DetailViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +134,7 @@
 			name = "First List";
 			packageProductDependencies = (
 				8D2CD9372A73461F0095F9EF /* Kingfisher */,
+				8D2CD93B2A74B7950095F9EF /* Alamofire */,
 			);
 			productName = "First List";
 			productReference = 8D2CD9172A7331610095F9EF /* First List.app */;
@@ -143,6 +166,7 @@
 			mainGroup = 8D2CD90E2A7331610095F9EF;
 			packageReferences = (
 				8D2CD9362A73461F0095F9EF /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				8D2CD93A2A74B7950095F9EF /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 8D2CD9182A7331610095F9EF /* Products */;
 			projectDirPath = "";
@@ -172,10 +196,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D2CD9442A7617BB0095F9EF /* DetailViewController.swift in Sources */,
 				8D2CD9312A7337620095F9EF /* ItemTableViewCell.swift in Sources */,
 				8D2CD91F2A7331610095F9EF /* ViewController.swift in Sources */,
+				8D2CD93E2A74B7D60095F9EF /* NarutoData.swift in Sources */,
 				8D2CD9352A7343210095F9EF /* DataProvider.swift in Sources */,
+				8D2CD9402A74B87C0095F9EF /* NarutoManager.swift in Sources */,
 				8D2CD91B2A7331610095F9EF /* AppDelegate.swift in Sources */,
+				8D2CD9422A74BB680095F9EF /* NarutoModel.swift in Sources */,
 				8D2CD91D2A7331610095F9EF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -410,6 +438,14 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		8D2CD93A2A74B7950095F9EF /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -417,6 +453,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8D2CD9362A73461F0095F9EF /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		8D2CD93B2A74B7950095F9EF /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8D2CD93A2A74B7950095F9EF /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

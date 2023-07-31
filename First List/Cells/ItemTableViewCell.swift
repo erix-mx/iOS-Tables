@@ -12,7 +12,6 @@ class ItemTableViewCell: UITableViewCell {
 
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var username: UILabel!
-    @IBOutlet weak var userContent: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,11 +28,9 @@ class ItemTableViewCell: UITableViewCell {
     
     func setupCell(
         username: String,
-        content: String,
         urlImage: String
     ) {
         self.username.text = username
-        self.userContent.text = content
         let url = URL(string: urlImage)
         userImage.kf.setImage(with: url)
     }
